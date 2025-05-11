@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task to Complete</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Task to Complete</h1>
+  </header>
+
+  <main class="matrix">
+    <div class="quadrant" data-type="do">
+      <h2>Important & Urgent<br><span>(Do It)</span></h2>
+      <ul class="task-list"></ul>
+      <button onclick="addTask(this)">Add Task</button>
+    </div>
+    <div class="quadrant" data-type="schedule">
+      <h2>Important But Not Urgent<br><span>(Schedule It)</span></h2>
+      <ul class="task-list"></ul>
+      <button onclick="addTask(this)">Add Task</button>
+    </div>
+    <div class="quadrant" data-type="delegate">
+      <h2>Not Important But Urgent<br><span>(Delegate It)</span></h2>
+      <ul class="task-list"></ul>
+      <button onclick="addTask(this)">Add Task</button>
+    </div>
+    <div class="quadrant" data-type="eliminate">
+      <h2>Not Important & Not Urgent<br><span>(Eliminate It)</span></h2>
+      <ul class="task-list"></ul>
+      <button onclick="addTask(this)">Add Task</button>
+    </div>
+  </main>
+
+  <section class="calendar-container">
+    <div class="calendar-header">
+      <button onclick="changeMonth(-1)">⏪</button>
+      <h2 id="monthYear"></h2>
+      <button onclick="changeMonth(1)">⏩</button>
+    </div>
+    <div id="calendar" class="calendar-grid"></div>
+  </section>
+
+  <footer>
+    <p>"If you have everything and still can't make it, the fault is only yours."</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

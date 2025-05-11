@@ -1,0 +1,145 @@
+:root {
+  --primary: #1a1a1a;
+  --secondary: #0d1b2a;
+  --tertiary: #dee2e6;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+header {
+  text-align: center;
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem;
+}
+
+.matrix {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.quadrant {
+  background-color: var(--tertiary);
+  padding: 1rem;
+  border-radius: 8px;
+  min-height: 200px;
+}
+
+.quadrant h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.task-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.3rem 0;
+  background-color: #f9f9f9;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.task-list input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.task-list span {
+  flex-grow: 1;
+}
+
+.task-list button {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+button {
+  margin-top: 0.5rem;
+  background-color: var(--primary);
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.calendar-container {
+  padding: 1rem;
+  background-color: var(--tertiary);
+  border-radius: 8px;
+  margin: 1rem;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: var(--primary);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  padding-top: 1rem;
+}
+
+.calendar-day {
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.calendar-day.today {
+  border: 2px solid blue;
+}
+
+.calendar-day.past {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+
+.calendar-day.has-task .dot {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  height: 8px;
+  width: 8px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+footer {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .matrix {
+    grid-template-columns: 1fr;
+  }
+}
